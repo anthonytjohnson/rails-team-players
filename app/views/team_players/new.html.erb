@@ -4,8 +4,13 @@
 
   <%= simple_form_for [@team, @team_player] do |f| %>
     <div class="search-form-control form-group">
-      <%= f.association :player, collection: Player.order('title ASC') %>
-      <%= f.submit class: 'btn btn-primary mt-2' %>
+      <%= f.association :player, collection: @centers.order('name ASC'), :label => "Center" %>
+      <%= f.association :player, collection: @powerforwards.order('name ASC'), :label => "Power Forward" %>
+      <%= f.association :player, collection: @smallforwards.order('name ASC'), :label => "Small Forward" %>
+      <%= f.association :player, collection: @shootingguards.order('name ASC'), :label => "Shooting Guard" %>
+      <%= f.association :player, collection: @pointguards.order('name ASC'), :label => "Point Guard" %>
+      <%= f.association :player, collection: @sixthmen.order('name ASC'), :label => "6th Man" %>
+      <%= f.submit "Create Team", class: 'btn btn-primary mt-2'%>
     </div>
   <% end %>
 
