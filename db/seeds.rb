@@ -7,6 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Cleaning database....'
 Player.destroy_all
+Team.destroy_all
+Skill.destroy_all
+
+# team = Team.new(name: 'Lakers', team_photo: 'https://d2p3bygnnzw9w3.cloudfront.net/req/202108041/tlogo/bbr/LAL.png')
+# team.save!
 
 puts 'Creating players...'
 
@@ -15,7 +20,8 @@ Player.create!(
   position: 'center',
   shoots: 'left',
   rating: 97,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/russebi01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/russebi01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -23,7 +29,8 @@ Player.create!(
   position: 'center',
   shoots: 'right',
   rating: 96,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/abdulka01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/abdulka01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -31,7 +38,8 @@ Player.create!(
   position: 'center',
   shoots: 'right',
   rating: 93,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/chambwi01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/chambwi01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -39,7 +47,8 @@ Player.create!(
   position: 'center',
   shoots: 'right',
   rating: 88,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/olajuha01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/olajuha01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -47,7 +56,8 @@ Player.create!(
   position: 'center',
   shoots: 'right',
   rating: 87,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/onealsh01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/onealsh01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -55,7 +65,8 @@ Player.create!(
   position: 'power forward',
   shoots: 'right',
   rating: 92,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/duncati01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/duncati01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -63,7 +74,8 @@ Player.create!(
   position: 'power forward',
   shoots: 'right',
   rating: 82,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/nowitdi01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/nowitdi01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -71,7 +83,8 @@ Player.create!(
   position: 'power forward',
   shoots: 'right',
   rating: 79,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/pettibo01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/pettibo01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -79,7 +92,8 @@ Player.create!(
   position: 'power forward',
   shoots: 'right',
   rating: 78,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/malonka01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/malonka01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -87,7 +101,8 @@ Player.create!(
   position: 'power forward',
   shoots: 'right',
   rating: 77,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/barklch01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/barklch01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -95,7 +110,8 @@ Player.create!(
   position: 'point guard',
   shoots: 'right',
   rating: 95,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/johnsma02.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/johnsma02.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -103,7 +119,8 @@ Player.create!(
   position: 'point guard',
   shoots: 'right',
   rating: 89,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/roberos01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/roberos01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -111,7 +128,8 @@ Player.create!(
   position: 'point guard',
   shoots: 'right',
   rating: 84,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/curryst01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/curryst01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -119,7 +137,8 @@ Player.create!(
   position: 'point guard',
   shoots: 'right',
   rating: 76,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/cousybo01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/cousybo01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -127,7 +146,8 @@ Player.create!(
   position: 'point guard',
   shoots: 'right',
   rating: 74,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/thomais01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/thomais01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -135,7 +155,8 @@ Player.create!(
   position: 'small forward',
   shoots: 'right',
   rating: 98,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/jamesle01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/jamesle01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -143,7 +164,8 @@ Player.create!(
   position: 'small forward',
   shoots: 'right',
   rating: 94,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/birdla01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/birdla01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -151,7 +173,8 @@ Player.create!(
   position: 'small forward',
   shoots: 'right',
   rating: 85,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/duranke01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/duranke01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -159,7 +182,8 @@ Player.create!(
   position: 'small forward',
   shoots: 'right',
   rating: 83,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/havlijo01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/havlijo01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -167,7 +191,8 @@ Player.create!(
   position: 'small forward',
   shoots: 'right',
   rating: 81,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/bayloel01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/bayloel01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -175,7 +200,8 @@ Player.create!(
   position: 'shooting guard',
   shoots: 'right',
   rating: 99,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/jordami01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/jordami01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -183,7 +209,8 @@ Player.create!(
   position: 'shooting guard',
   shoots: 'right',
   rating: 91,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/bryanko01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/bryanko01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -191,7 +218,8 @@ Player.create!(
   position: 'shooting guard',
   shoots: 'right',
   rating: 90,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/westje01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/westje01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -199,7 +227,8 @@ Player.create!(
   position: 'shooting guard',
   shoots: 'right',
   rating: 72,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/wadedw01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/wadedw01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -207,7 +236,8 @@ Player.create!(
   position: 'shooting guard',
   shoots: 'left',
   rating: 62,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/hardeja01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -215,7 +245,8 @@ Player.create!(
   position: '6th man',
   shoots: 'right',
   rating: 86,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/malonmo01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/malonmo01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -223,7 +254,8 @@ Player.create!(
   position: '6th man',
   shoots: 'right',
   rating: 80,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/ervinju01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/ervinju01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -231,7 +263,8 @@ Player.create!(
   position: '6th man',
   shoots: 'right',
   rating: 75,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/garneke01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/garneke01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -239,7 +272,8 @@ Player.create!(
   position: '6th man',
   shoots: 'right',
   rating: 73,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/antetgi01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/antetgi01.jpg',
+  # team: team
 )
 
 Player.create!(
@@ -247,10 +281,13 @@ Player.create!(
   position: '6th man',
   shoots: 'right',
   rating: 71,
-  photo: 'https://www.basketball-reference.com/req/202106291/images/players/pippesc01.jpg'
+  photo: 'https://www.basketball-reference.com/req/202106291/images/players/pippesc01.jpg',
+  # team: team
 )
 
-skills = [
+puts 'created all players'
+
+abilities = [
   'Distributor',
   'Interior Defender',
   'Perimeter Defender',
@@ -260,6 +297,6 @@ skills = [
   'Three-Point Marksman'
 ]
 
-skills.each do |skill|
-  Skill.create!(name: skill)
+abilities.each do |ability|
+  Skill.create!(name: ability)
 end

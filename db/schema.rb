@@ -10,9 +10,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_08_14_031153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "player_skills", force: :cascade do |t|
+    t.bigint "player_id", null: false
+    t.bigint "skill_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["player_id"], name: "index_player_skills_on_player_id"
+    t.index ["skill_id"], name: "index_player_skills_on_skill_id"
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string "name"
+    t.string "position"
+    t.string "shoots"
+    t.integer "rating"
+    t.string "photo"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "team_players", force: :cascade do |t|
+    t.bigint "team_id", null: false
+    t.bigint "player_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["player_id"], name: "index_team_players_on_player_id"
+    t.index ["team_id"], name: "index_team_players_on_team_id"
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.string "team_photo"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "player_skills", "players"
+  add_foreign_key "player_skills", "skills"
+  add_foreign_key "team_players", "players"
+  add_foreign_key "team_players", "teams"
 end
