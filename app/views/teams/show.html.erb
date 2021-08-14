@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path (@team.photo.key), height: 300, crop: :fill %>')">
+    <div class="container">
+      <h1><%= @team.name %></h1>
+      <%= link_to "Add players", new_team_team_player_path(@team), class: "btn btn-flat" %>
+      <%= link_to "Back", teams_path, class: "btn btn-flat" %>
+    </div>
+  </div>
+  <hr>
+
+  <h3>Players</h3>
+  <hr>
+
+  <div class="cards">
+    <% @team.team_players.each do |team_player| %>
+    <div class="card-product">
+      <%= image_tag "#{team_player.player.photo}", alt: "#{team_player.player.name}"%>
+      <div class="card-product-infos">
+        <h2><%= team_player.player.name %></h2>
+        <p><%= team_player.player.position %></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+</div>

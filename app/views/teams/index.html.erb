@@ -1,0 +1,18 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "basketballbanner.jpg", alt: "Banner"%>')">
+  <div class="container">
+    <h1>Basketball Teams</h1>
+    <%= link_to 'New Team', new_team_path, class: "btn btn-flat mt-3" %>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Teams</h1>
+
+  <div class="cards">
+    <% @teams.each do |team| %>
+    <%= link_to team_path(team) do %>
+      <%= render 'teams/card', team: team  %>
+    <% end %>
+    <% end %>
+  </div>
+</div>

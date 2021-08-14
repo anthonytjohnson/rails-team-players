@@ -1,0 +1,14 @@
+<div class="container">
+
+  <h1>Add a New Team</h1>
+
+  <%= simple_form_for(@team) do |f| %>
+    <div class="search-form-control form-group">
+      <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit class: 'btn btn-primary mt-2' %>
+    </div>
+  <% end %>
+
+  <%= link_to 'Back', teams_path %>
+</div>
