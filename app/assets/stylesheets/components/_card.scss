@@ -33,6 +33,41 @@
   padding: 16px;
 }
 
+.card-player {
+  overflow: hidden;
+  height: 240px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.card-player img {
+  height: 100%;
+  width: 240px;
+  object-fit: cover;
+}
+
+.card-player h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-player p {
+  font-size: 24px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  position: relative;
+}
+
+.card-player .card-player-infos {
+  padding: 64px;
+}
+
 .card-category {
   background-size: cover;
   background-position: center;
@@ -97,6 +132,12 @@
 .card-delete {
   position: absolute;
   bottom: 5px;
+  right: 5px;
+}
+
+.card-view {
+  position: absolute;
+  top: 5px;
   right: 5px;
 }
 

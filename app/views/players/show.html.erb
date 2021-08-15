@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="card-player">
+    <%= image_tag "#{@player.photo}", alt: "#{@player.name}"%>
+    <div class="card-player-infos">
+      <h2><%= @player.name %></h2>
+      <p><%= @player.position.capitalize %></p>
+      <p>Shooting hand: <%= @player.shoots %></p>
+      <p>Rating: <%= @player.rating %></p>
+    </div>
+  </div>
+</div>
