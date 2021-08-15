@@ -15,11 +15,12 @@
     <% @team.team_players.each do |team_player| %>
     <div class="card-product">
       <%= image_tag "#{team_player.player.photo}", alt: "#{team_player.player.name}"%>
+      <%= link_to 'Delete', team_player_path(team_player.id), :method => :delete , data: { confirm: "Are you sure you want to delete player?"}, class: "btn btn-danger card-delete" %>
       <div class="card-product-infos">
         <h2><%= team_player.player.name %></h2>
         <p><%= team_player.player.position %></p>
+
       </div>
-      <%= link_to 'Delete', team_player_path(team_player.id), :method => :delete , data: { confirm: "Are you sure you want to delete player?"}, class: "btn btn-danger" %>
     </div>
     <% end %>
   </div>

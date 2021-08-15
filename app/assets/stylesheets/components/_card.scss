@@ -5,6 +5,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .card-product img {
@@ -93,18 +94,9 @@
 }
 
 .card-delete {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 30px;
   position: absolute;
-  right: 10px;
-  top: 10px;
-  font-weight: lighter;
-  &:hover {
-   text-decoration: none;
-  }
+  bottom: 5px;
+  right: 5px;
 }
 
 // Smallest device
